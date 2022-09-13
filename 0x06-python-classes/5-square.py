@@ -28,10 +28,12 @@ class Square:
         return self.__size**2
 
     def my_print(self):
-        """ Prints the square """
+        """ Print the square with the # character. """
         area = self.area()
         for i in range(0, area):
-            if i % self.__size == 0:
+            if self.__size == 0:
+                print("")
+            elif i % self.__size == 0:
                 print("\n#", end='')
             else:
                 print("#", end='')
