@@ -5,7 +5,8 @@
 class Square:
     """ creating private instance attribute size with conditions """
     def __init__(self, size=0):
-        pass
+        """ initialize a new square """
+        self.__size = size
 
     @property
     def size(self):
