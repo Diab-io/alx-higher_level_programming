@@ -31,10 +31,10 @@ class Square:
         """ Print the square with the # character. """
         area = self.area()
         for i in range(0, area):
-            if self.__size == 0:
-                print("")
-            elif i % self.__size == 0:
+            if i % self.__size == 0:
                 print("\n#", end='')
             else:
                 print("#", end='')
         print("")
+        if self.__size == 0:
+            print("")
