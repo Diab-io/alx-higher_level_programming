@@ -86,11 +86,12 @@ class Rectangle(Base):
     
     def display(self):
         """ prints out the rectangle """
+        [print("") for i in range(self.y)]
         for i in range(self.height):
-            print("#"*self.width)
+            print(" "*self.x + "#"*self.width)
 
     def __str__(self):
-        """Return the print() and str() representation of the Rectangle."""
+        """ overriding the str method """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
                                                        self.width, self.height)
