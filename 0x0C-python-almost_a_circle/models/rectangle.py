@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ A class that inherits from base class """
 
-from models.base import Base
+from base import Base
 
 class Rectangle(Base):
     """ Represents a rectangle """
@@ -22,10 +22,10 @@ class Rectangle(Base):
                 TypeError: If either of x or y is not an int.
                 ValueError: If either of x or y < 0.
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y 
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y 
         super().__init__(id)
     
     @property
@@ -63,7 +63,7 @@ class Rectangle(Base):
     def x(self, value):
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
-        if (value <= 0):
+        if (value < 0):
             raise ValueError("x must be > 0")
         self.__x = value
 
@@ -76,6 +76,6 @@ class Rectangle(Base):
     def y(self, value):
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
-        if (value <= 0):
+        if (value < 0):
             raise ValueError("y must be > 0")
         self.__y = value
