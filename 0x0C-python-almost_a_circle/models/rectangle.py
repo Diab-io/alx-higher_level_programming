@@ -42,19 +42,19 @@ class Rectangle(Base):
         self.__height = value
     
     @property
-    def get_x(self):
+    def x(self):
         """ set/get the x coordinate of the rectangle"""
         return self.__x
     
-    @get_x.setter
-    def get_x(self, value):
+    @x.setter
+    def x(self, value):
         self.__x = value
 
     @property
-    def get_y(self):
+    def y(self):
         """ set/get the y coordinate of the rectangle"""
         return self.__y
     
-    @get_y.setter
-    def get_y(self, value):
+    @y.setter
+    def y(self, value):
         self.__y = value
