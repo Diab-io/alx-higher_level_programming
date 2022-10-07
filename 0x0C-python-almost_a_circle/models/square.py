@@ -1,18 +1,18 @@
 #!/usr/bin/python3
-""" A class that inherits from rectangle class """
-
-from turtle import width
+"""Creating a square class"""
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
-    """ Represents a square """
+    """Defining square class"""
     def __init__(self, size, x=0, y=0, id=None):
         """Initializing square class"""
         super().__init__(size, size, x, y, id)
-    
+
     def __str__(self):
-        """ Printing square class by overloading __str__ method """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        """Printing square class by overloading __str__ method"""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
 
     @property
     def size(self):
@@ -24,7 +24,7 @@ class Square(Rectangle):
         """Setting size of square"""
         self.width = value
         self.height = value
-    
+
     def update(self, *args, **kwargs):
         """Updating square class"""
         if args is not None and len(args) != 0:
@@ -52,5 +52,5 @@ class Square(Rectangle):
                     self.y = value
 
     def to_dictionary(self):
-        """ returns description of a square """
-        return {"id": self.id, "x": self.x, "size": self.size, "y": self.y}
+        """Returning dictionary representation of square"""
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
