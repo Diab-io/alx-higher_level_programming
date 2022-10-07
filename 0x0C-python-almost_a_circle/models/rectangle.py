@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ A class that inherits from base class """
 
-from base import Base
+from models.base import Base
 
 class Rectangle(Base):
     """ Represents a rectangle """
