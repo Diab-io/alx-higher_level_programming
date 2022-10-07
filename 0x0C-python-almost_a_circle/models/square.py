@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ A class that inherits from rectangle class """
 
+from turtle import width
 from models.rectangle import Rectangle
 
 class Square(Rectangle):
@@ -49,3 +50,7 @@ class Square(Rectangle):
                     self.x = value
                 elif key == "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """ returns description of a square """
+        return {"id": self.id, "x": self.x, "size": self.size, "y": self.y}
